@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Resumen de \ntus Gastos"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Total Gastado:"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTotalAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/tvAmountCredit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Total en crédito:"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalAmount" />
+
+    <TextView
+        android:id="@+id/totalAmountCredit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvAmountCredit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/tvAmountCash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="Total en metálico:"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountCredit" />
+
+    <TextView
+        android:id="@+id/totalAmountCash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvAmountCash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:backgroundTint="@color/blueButton1"
+        android:text="Guardar"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/deleteAll"
+        app:layout_constraintEnd_toStartOf="@id/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountCash"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:backgroundTint="@color/blueButton1"
+        android:text="Inicio"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/save" />
+
+    <Button
+        android:id="@+id/deleteAll"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:backgroundTint="@color/blueButton2"
+        android:text="Borrar Datos"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/home"
+        app:layout_constraintStart_toStartOf="@id/save" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
